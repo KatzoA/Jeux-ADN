@@ -9,9 +9,9 @@ informations sur le séquençage ADN.
 - Des 7correspondent à une personne de sexe Masculin (ex : 7777x777x…)
 - Des 9correspondent à une personne de sexe Féminin (ex : 99999x99…)
 ####Age :
-• Plus de 18 caractères correspondent à une personne de plus de 21 ans
-• Moins de 18 caractères correspondent à une personne de Moins de 21 ans
-• Moins de 6 caractères correspondent à une personne de Plus de 65 ans
+- Plus de 18 caractères correspondent à une personne de plus de 21 ans
+- Moins de 18 caractères correspondent à une personne de Moins de 21 ans
+- Moins de 6 caractères correspondent à une personne de Plus de 65 ans
 ##Niveau 1.
 Le premier patient arrive avec son échantillon d’ADN
 La machine vous donne le résultat suivant : 7777x77x777777x777777
