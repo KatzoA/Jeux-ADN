@@ -25,10 +25,6 @@ public class Main {
             System.out.println("C est un homme");
         }
 
-        // ternaire
-        // String phrase = count == 0 ? "La personne est une femme" : "La personne est un homme";
-        // System.out.println(phrase);
-
         // vérification de l'age de la personne
 
         if(nombreCaractere > 18){
