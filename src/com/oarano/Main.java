@@ -17,7 +17,6 @@ public class Main {
         System.out.println("Nombre de caracteres : " + nombreCaractere);
 
         // tester si la personne est de sexe masculin ou feminin
-
         if(count == 0){
             //femme
             System.out.println("C'est une femme");
@@ -25,6 +24,10 @@ public class Main {
             //homme
             System.out.println("C est un homme");
         }
+
+        // ternaire
+        // String phrase = count == 0 ? "La personne est une femme" : "La personne est un homme";
+        // System.out.println(phrase);
 
         // vérification de l'age de la personne
 
