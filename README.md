@@ -25,7 +25,6 @@ Un troisième patient arrive dans la salle.
 - Demander le prénom, l’Age et le sexe du patient
 La personne vous donne son échantillon.
 La machine calcule déchiffre le code suivant : 77x77x7
-- Indiquer si la personne à menti sur son âge ou non
 ##Niveau 3.
 Après vos premiers tests concluants, le DR. Katzoa revient vers vous et vous informe
 qu’une nouvelle information vient d’être trouvé !

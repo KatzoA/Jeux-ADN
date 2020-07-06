@@ -1,42 +1,56 @@
 package com.oarano;
 
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String adn = "999";
+        // exercice niveau 3
+        // compteur de personne du genre feminin
+        int compteur = 0;
 
-        // analyser si c'était des 7 ou des 9
-        long count = adn.chars().filter(element -> element == '7').count();
-        int nombreCaractere = adn.length();
+        // parcourir le fichier et lire chaque sequence d'ADN
+        File monfichier = new File("src/adn.txt");
 
-        // afficher le nombre de caracteres
+        // verifier si le fichier existe
+        if(monfichier.exists()) {
+            System.out.println("Fichier existant");
 
-        System.out.println("Nombre de caracteres : " + nombreCaractere);
+            // lire le fichier
+            try{
+                BufferedReader lecture = new BufferedReader(new FileReader(monfichier));
+                String ligne = lecture.readLine();
 
-        // tester si la personne est de sexe masculin ou feminin
-        if(count == 0){
-            //femme
-            System.out.println("C'est une femme");
-        }else{
-            //homme
-            System.out.println("C est un homme");
+                // boucler sur chaque ligne
+                // tant qu'il y en a encore
+                while (ligne != null) {
+
+                    // analyser l'age de chaque personne
+                    int nombreCaracteres = ligne.length();
+                    String trancheAge = nombreCaracteres <= 6 ? "+65 ans" : nombreCaracteres < 18 ? "-21 ans" : "+ de 21 ans";
+                    System.out.println(trancheAge);
+                    ligne = lecture.readLine();
+                }
+
+
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+        else{
+            System.out.println("Fichier non existant");
         }
 
-        // vérification de l'age de la personne
+        System.out.println("Le nombre de femmes dans notre base d'ADN etant de " + compteur);
 
-        if(nombreCaractere > 18){
-            System.out.println("La personne a plus de 21 ans");
-        }
-        else if(nombreCaractere > 6){
-            System.out.println("La personne a moins de 21 ans");
-        }else{
-            System.out.println("La personne a plus de 65 ans");
-        }
-        // afficher le nombre de 7 trouvé
+    } // fin de la fonction main
 
-        System.out.println(count);
-    }
 }
